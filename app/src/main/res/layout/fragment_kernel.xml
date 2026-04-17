@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Kernel Tweaks" android:textColor="@color/primary"
+            android:textSize="22sp" android:textStyle="bold"
+            android:letterSpacing="0.02" android:layout_marginBottom="4dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <TextView android:id="@+id/tv_kernel_version" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Kernel: —" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/tv_cpu_cores" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="— Cores"
+                android:textColor="@color/text_secondary" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- CPU Governor -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="CPU Governor" android:textColor="@color/text_primary"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_governor_current" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Current: —"
+                        android:textColor="@color/primary" android:textSize="11sp"/>
+                </LinearLayout>
+                <Spinner android:id="@+id/spinner_governor" android:layout_width="match_parent"
+                    android:layout_height="48dp" android:background="@drawable/bg_card_accent"
+                    android:popupBackground="@color/bg_card"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CPU Max Frequency — Spinner dari device -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CPU FREQUENCY LIMITS"
+                    android:textColor="@color/text_secondary" android:textSize="11sp"
+                    android:letterSpacing="0.1" android:textAllCaps="true"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Max Freq -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Max Frequency" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tv_cpu_max_current"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textColor="@color/primary"
+                        android:textSize="11sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <Spinner android:id="@+id/spinner_cpu_max_freq"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/bg_card_accent"
+                    android:popupBackground="@color/bg_card"
+                    android:layout_marginBottom="16dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginBottom="16dp"/>
+
+                <!-- Min Freq -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Min Frequency" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tv_cpu_min_current"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textColor="@color/text_secondary"
+                        android:textSize="11sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <Spinner android:id="@+id/spinner_cpu_min_freq"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:background="@drawable/bg_card_accent"
+                    android:popupBackground="@color/bg_card"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- I/O Scheduler -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="I/O Scheduler" android:textColor="@color/text_primary"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_io_current" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Current: —"
+                        android:textColor="@color/primary" android:textSize="11sp"/>
+                </LinearLayout>
+                <Spinner android:id="@+id/spinner_io_sched" android:layout_width="match_parent"
+                    android:layout_height="48dp" android:background="@drawable/bg_card_accent"
+                    android:popupBackground="@color/bg_card"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- VM Swappiness (tetap slider karena range 0-100 bukan freq device) -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="VM Swappiness" android:textColor="@color/text_primary"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/swappiness_value" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="60"
+                        android:textColor="@color/primary" android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <com.google.android.material.slider.Slider android:id="@+id/slider_swappiness"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:valueFrom="0" android:valueTo="100" android:value="60"
+                    android:stepSize="1" app:thumbColor="@color/primary"
+                    app:trackColorActive="@color/primary" app:trackColorInactive="@color/border_primary"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- TCP Congestion -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="TCP Congestion" android:textColor="@color/text_primary"
+                    android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <Spinner android:id="@+id/spinner_tcp_cong" android:layout_width="match_parent"
+                    android:layout_height="48dp" android:background="@drawable/bg_card_accent"
+                    android:popupBackground="@color/bg_card"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Toggle Tweaks -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Toggle Tweaks" android:textColor="@color/text_primary"
+                    android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Enable TCP BBR" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <Switch android:id="@+id/switch_tcp_bbr" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Enable ZRAM (512MB)" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <Switch android:id="@+id/switch_zram" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                    android:gravity="center_vertical" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Aggressive Doze" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <Switch android:id="@+id/switch_doze" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Disable Auto-Sync" android:textColor="@color/text_primary" android:textSize="13sp"/>
+                    <Switch android:id="@+id/switch_sync" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_apply_kernel"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="Apply Tweaks" android:textSize="15sp" android:textStyle="bold"
+            android:backgroundTint="@color/primary" android:textColor="@color/text_primary"
+            app:cornerRadius="14dp" android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

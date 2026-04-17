@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home"    android:icon="@drawable/ic_home"      android:title="Home"/>
+    <item android:id="@+id/nav_kernel"  android:icon="@drawable/ic_kernel"    android:title="Kernel"/>
+    <item android:id="@+id/nav_gpu"     android:icon="@drawable/ic_bar_chart" android:title="GPU"/>
+    <item android:id="@+id/nav_tools"   android:icon="@drawable/ic_tools"     android:title="Tools"/>
+    <item android:id="@+id/nav_profile" android:icon="@drawable/ic_shield"    android:title="Settings"/>
+</menu>

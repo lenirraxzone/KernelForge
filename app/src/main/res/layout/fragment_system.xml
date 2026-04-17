@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="System Info"
+            android:textColor="@color/primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device &amp; runtime statistics"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Device Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Row helper macro style -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Model" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_device" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Android" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_android" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Kernel" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_kernel" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Build" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_build" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Root" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_root_status" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/status_good" android:textSize="12sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="SELinux" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_selinux" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Uptime" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_uptime" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CPU Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CPU"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Arch" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_cpu_arch" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Cores" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_cpu_cores" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Max Freq" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_cpu_max_freq" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/primary" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- RAM Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RAM"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Total" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_ram_total" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Used" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_ram_used" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/accent_orange" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Free" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_ram_free" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/accent_green" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Battery + GPU Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery &amp; GPU"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bat Level" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_batt_level" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bat Temp" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_batt_temp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/accent_yellow" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="Bat Status" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_batt_status" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/text_primary" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="GPU Freq" android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+                    <TextView android:id="@+id/tv_gpu_freq" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="—" android:textColor="@color/accent" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Live Charts -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live Charts"
+            android:textColor="@color/text_tertiary"
+            android:textSize="10sp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CPU %" android:textColor="@color/accent_green"
+                    android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart_cpu"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="RAM %" android:textColor="@color/accent_orange"
+                    android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart_ram"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Temp °C" android:textColor="@color/accent_red"
+                    android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

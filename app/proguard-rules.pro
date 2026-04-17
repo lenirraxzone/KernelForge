@@ -1,0 +1,3 @@
+-keep class com.kernelforge.tweak.** { *; }
+-keepattributes *Annotation*
+-dontwarn okhttp3.**

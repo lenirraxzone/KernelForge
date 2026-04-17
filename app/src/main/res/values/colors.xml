@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LENIRRAxZONE Brand Colors -->
+    <color name="primary">#6C63FF</color>
+    <color name="primary_dark">#5A52E0</color>
+    <color name="primary_variant">#4A43C8</color>
+    <color name="accent">#00D4FF</color>
+    <color name="accent_green">#2ED573</color>
+    <color name="accent_orange">#FF6B35</color>
+    <color name="accent_red">#FF4757</color>
+    <color name="accent_yellow">#FFB800</color>
+    <color name="accent_purple">#6C63FF</color>
+
+    <!-- Background Colors -->
+    <color name="bg_primary">#0A0A0F</color>
+    <color name="bg_secondary">#12121A</color>
+    <color name="bg_card">#1A1A26</color>
+    <color name="bg_card_elevated">#202030</color>
+    <color name="bg_surface">#1E1E2E</color>
+    <color name="bg_overlay">#CC0A0A0F</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#F0F0F0</color>
+    <color name="text_secondary">#8888A0</color>
+    <color name="text_tertiary">#444460</color>
+    <color name="text_accent">#6C63FF</color>
+    <color name="text_green">#2ED573</color>
+    <color name="text_red">#FF4757</color>
+    <color name="text_orange">#FF6B35</color>
+    <color name="text_yellow">#FFB800</color>
+
+    <!-- Status Colors -->
+    <color name="status_good">#2ED573</color>
+    <color name="status_warning">#FFB800</color>
+    <color name="status_critical">#FF4757</color>
+    <color name="status_info">#00D4FF</color>
+
+    <!-- Border / Divider -->
+    <color name="border_primary">#2A2A3E</color>
+    <color name="border_accent">#6C63FF40</color>
+    <color name="divider">#1A1A2E</color>
+
+    <!-- Chart Colors -->
+    <color name="chart_line">#6C63FF</color>
+    <color name="chart_fill">#1A6C63FF</color>
+    <color name="chart_cpu">#2ED573</color>
+    <color name="chart_ram">#FF6B35</color>
+    <color name="chart_temp">#FF4757</color>
+    <color name="chart_battery">#FFB800</color>
+
+    <!-- Gauge Colors -->
+    <color name="gauge_low">#2ED573</color>
+    <color name="gauge_mid">#FFB800</color>
+    <color name="gauge_high">#FF6B35</color>
+    <color name="gauge_critical">#FF4757</color>
+    <color name="gauge_bg">#1A1A26</color>
+    <color name="gauge_track">#2A2A3E</color>
+
+    <!-- Material Theme -->
+    <color name="colorPrimary">#6C63FF</color>
+    <color name="colorPrimaryDark">#0A0A0F</color>
+    <color name="colorAccent">#6C63FF</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorBackground">#0A0A0F</color>
+    <color name="colorSurface">#1A1A26</color>
+    <color name="colorOnSurface">#F0F0F0</color>
+    <color name="colorError">#FF4757</color>
+</resources>

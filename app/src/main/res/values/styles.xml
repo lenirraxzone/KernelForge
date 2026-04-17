@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Application Theme -->
+    <style name="Theme.KernelForge" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/bg_primary</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorError">@color/accent_red</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_secondary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="materialButtonStyle">@style/Widget.KernelForge.Button</item>
+        <item name="bottomNavigationStyle">@style/Widget.KernelForge.BottomNav</item>
+        <item name="cardViewStyle">@style/Widget.KernelForge.Card</item>
+    </style>
+
+    <!-- Splash Theme -->
+    <style name="Theme.KernelForge.Splash" parent="Theme.KernelForge">
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Widget.KernelForge.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.KernelForge.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.KernelForge.Button.Boost" parent="Widget.KernelForge.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="Widget.KernelForge.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/bg_card</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- Bottom Navigation -->
+    <style name="Widget.KernelForge.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/bg_secondary</item>
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- Switch Style -->
+    <style name="Widget.KernelForge.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/switch_thumb_color</item>
+        <item name="trackTint">@color/switch_track_color</item>
+    </style>
+
+    <!-- Chip Style -->
+    <style name="Widget.KernelForge.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_bg_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipStrokeColor">@color/chip_stroke_color</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">20dp</item>
+    </style>
+
+    <!-- Slider Style -->
+    <style name="Widget.KernelForge.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="thumbColor">@color/primary</item>
+        <item name="trackColorActive">@color/primary</item>
+        <item name="trackColorInactive">@color/border_primary</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="Dialog.KernelForge" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+</resources>

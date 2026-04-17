@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KernelForge</string>
+    <string name="app_version">v1.0.0</string>
+    <string name="app_tagline">Root System Optimizer</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_kernel">Kernel</string>
+    <string name="nav_gpu">GPU</string>
+    <string name="nav_tools">Tools</string>
+    <string name="nav_profile">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="cpu_usage">CPU Usage</string>
+    <string name="ram_usage">RAM Usage</string>
+    <string name="battery_temp">Battery Temp</string>
+    <string name="thermal_status">Thermal Status</string>
+    <string name="selinux_status">SELinux</string>
+    <string name="gpu_freq">GPU Freq</string>
+    <string name="uptime">Uptime</string>
+
+    <!-- Performance Profiles -->
+    <string name="boost_now">Boost</string>
+    <string name="boosting">...</string>
+    <string name="profile_balanced">Balanced</string>
+    <string name="profile_gaming">Gaming</string>
+    <string name="profile_battery">Battery</string>
+    <string name="profile_powersave">Powersave</string>
+    <string name="profile_performance">Performance</string>
+
+    <!-- Quick Tweaks -->
+    <string name="apply_on_boot">Apply on Boot</string>
+
+    <!-- Dialogs -->
+    <string name="btn_apply">Apply</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_reboot">Reboot Now</string>
+    <string name="btn_ok">OK</string>
+
+    <!-- Status -->
+    <string name="root_checking">Checking root access…</string>
+    <string name="root_granted">Root Granted</string>
+    <string name="root_denied">Root Denied</string>
+    <string name="applying_tweak">Applying…</string>
+    <string name="tweak_applied">Tweak applied!</string>
+
+    <!-- SELinux -->
+    <string name="selinux_enforcing">Enforcing</string>
+    <string name="selinux_permissive">Permissive</string>
+
+    <!-- Thermal -->
+    <string name="thermal_cool">Cool</string>
+    <string name="thermal_warm">Warm</string>
+    <string name="thermal_hot">Hot</string>
+    <string name="thermal_critical">Critical</string>
+</resources>
